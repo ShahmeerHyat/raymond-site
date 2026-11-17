@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raymond · a chief of staff that lives on your computer</title>
+<meta name="description" content="Raymond reads your email, calendar and files on your own machine, answers questions about your business with the source quoted, and never acts without your approval.">
+<meta name="theme-color" content="#09090b">
+<meta property="og:title" content="Meet Raymond">
+<meta property="og:description" content="A chief of staff that lives on your own computer. Answers with the source quoted. Acts only when you approve.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#top" aria-label="Raymond, home"><span class="logo-ray" id="ray-logo"></span><span>Raymond</span></a>
+    <nav class="links">
+      <a href="#how">How it works</a>
+      <a href="#demo">Ask it</a>
+      <a href="#right">Why it's right</a>
+      <a href="#local">Privacy</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-light btn-sm" href="#download">Download</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="glow" aria-hidden="true"></div>
+    <div class="wrap center">
+      <a class="pill reveal" href="#download"><span class="dot-live"></span><b>In private testing.</b> For Windows, Mac and Linux <span class="arr">↗</span></a>
+      <h1 class="h-hero reveal">Meet <span class="inline-ray" id="ray-inline"></span> Raymond</h1>
+      <p class="sub reveal">A chief of staff that lives on your own computer. It reads your email, calendar and files, answers in seconds with the source quoted, and never sends, pays or changes anything without your OK.</p>
+      <div class="ctas reveal">
+        <a class="btn btn-light" href="#download"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></svg><span id="dl-label">Download Raymond</span></a>
+        <a class="btn btn-dark" href="#demo">Watch it work</a>
+      </div>
+    </div>
+
+    <!-- inbox → Raymond → ledger -->
+    <div class="wrap">
+      <div class="stage reveal" id="stage">
+        <div class="panel inbox">
+          <div class="panel-h"><span>Inbox</span><span class="mono soft">new mail</span></div>
+          <div class="mails" id="mails"></div>
+        </div>
+        <div class="stage-ray">
+          <div class="ray-big" id="ray-hero" title="Poke me"></div>
+          <div class="caption mono" id="caption"><span class="cap-dot"></span><span id="caption-text">waiting for mail</span></div>
+        </div>
+        <div class="panel ledger">
+          <div class="panel-h"><span>Ledger</span><span class="mono soft">filed, with the quote</span></div>
+          <div class="rows" id="rows"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOODS -->
+  <section class="sec" id="how">
+    <div class="wrap">
+      <div class="split">
+        <h2 class="h2 reveal">It already knows, because it read everything when it arrived.</h2>
+        <p class="lede reveal">Most assistants search your mail when you ask. Raymond reads each message once, in the background, and files what it says into a ledger: who quoted what, who owes what by when, what is paid, what is blocked. Questions become lookups.</p>
+      </div>
+      <div class="moods" id="moods">
+        <figure data-color="reading"  data-shape="squircle" data-mood="reading"><div class="m-ray"></div><figcaption>Reading new mail</figcaption></figure>
+        <figure data-color="thinking" data-shape="round"    data-mood="thinking"><div class="m-ray"></div><figcaption>Looking it up</figcaption></figure>
+        <figure data-color="asking"   data-shape="drop"     data-mood="asking"><div class="m-ray"></div><figcaption>Asking which Imran</figcaption></figure>
+        <figure data-color="raymond"  data-shape="pear"     data-mood="happy" data-tie><div class="m-ray"></div><figcaption>Found it, quote attached</figcaption></figure>
+        <figure data-color="norecord" data-shape="bean"     data-mood="norecord"><div class="m-ray"></div><figcaption>Saying "no record"</figcaption></figure>
+        <figure data-color="waiting"  data-shape="clover"   data-mood="waiting"><div class="m-ray"></div><figcaption>Waiting for your OK</figcaption></figure>
+        <figure data-color="brief"    data-shape="tall"     data-mood="brief"><div class="m-ray"></div><figcaption>Writing tomorrow's brief</figcaption></figure>
+        <figure data-color="flagged"  data-shape="round"    data-mood="flagged"><div class="m-ray"></div><figcaption>Flagging a fishy email</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAT DEMO -->
+  <section class="sec" id="demo">
+    <div class="wrap">
+      <div class="center head">
+        <h2 class="h2 reveal">Ask it anything about your business.</h2>
+        <p class="lede reveal">Prices, invoices, deadlines, who promised what. You get the answer and the sentence it came from.</p>
+      </div>
+      <div class="window reveal" id="window">
+        <div class="win-bar">
+          <span class="lights"><i></i><i></i><i></i></span>
+          <span class="win-title"><span class="win-av" id="ray-chat"></span>Raymond</span>
+          <span class="win-badge mono"><span class="dot-live"></span>on this computer</span>
+        </div>
+        <div class="win-body">
+          <aside class="side">
+            <div class="side-ray"><div class="side-big" id="ray-side"></div></div>
+            <a class="side-item on"><b>Ask</b><span>Questions about the business</span></a>
+            <a class="side-item"><b>Approvals</b><span>Replies and moves to check</span><em>1</em></a>
+            <a class="side-item"><b>Ledger</b><span>Owed, promised, current facts</span></a>
+            <a class="side-item"><b>Brief</b><span>What needs you today</span></a>
+            <a class="side-item"><b>Diary</b><span>Your calendar, checked</span></a>
+          </aside>
+          <div class="convo">
+            <div class="msgs" id="msgs"></div>
+            <div class="composer"><span class="comp-text" id="comp-text"></span><span class="caret"></span><span class="comp-ph" id="comp-ph">Ask Raymond…</span><span class="send">↑</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="tabs" id="tabs" role="tablist"></div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="bento">
+        <article class="tile reveal">
+          <div class="t-art art-answer"><span class="mono">INV-4471?</span><b>Paid · 2 Nov</b><i>“we confirm receipt of PKR 1,240,000”</i></div>
+          <h3>Answers about the business</h3><p>Prices and quotes, invoices paid and overdue, lease and licence dates, who promised what. With the sentence it came from.</p>
+        </article>
+        <article class="tile t-wide reveal">
+          <div class="t-art art-change"><span class="old mono">PKR 272 / L · 25 May</span><span class="new mono">PKR 287 / L · 7 Jun</span></div>
+          <h3>What changed</h3><p>When a supplier revises a rate or a lease is renewed, the old figure is kept as history and the new one becomes the answer.</p>
+        </article>
+        <article class="tile reveal">
+          <div class="t-art art-cal"><i></i><i class="clash"></i><i></i><i></i><i class="clash"></i><i></i><i></i></div>
+          <h3>Your calendar, checked</h3><p>Double bookings found before you are. Ask it to move a meeting and it finds a time that works for both sides.</p>
+        </article>
+        <article class="tile reveal">
+          <div class="t-art art-promise mono">"I'll send it by <u>Friday</u>"<span>→ due Fri 5 Nov</span></div>
+          <h3>Commitments tracked</h3><p>A promise in an email becomes a dated item. Raymond tells you when the date passes with nothing received.</p>
+        </article>
+        <article class="tile reveal">
+          <div class="t-art art-brief"><span class="moon"></span><span class="mono">06:30 · brief ready</span></div>
+          <h3>A morning brief</h3><p>What came in, what is due, what needs a decision from you today. Prepared overnight, while the machine is idle.</p>
+        </article>
+        <article class="tile t-wide reveal">
+          <div class="t-art art-approve"><span class="mono">Move "Plant visit" → Wed 3 Nov, 14:00</span><span class="ap-btns"><b>Approve</b><i>Reject</i></span></div>
+          <h3>Actions, on your say-so</h3><p>Replies and calendar changes are drafted as approval cards showing exactly what will be sent. Nothing happens until you approve.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY IT'S RIGHT -->
+  <section class="sec" id="right">
+    <div class="wrap">
+      <div class="split">
+        <h2 class="h2 reveal">Built so it can't make things up.</h2>
+        <p class="lede reveal">Language models are good at reading and bad at remembering, counting and keeping track. So Raymond's model only reads. Code does the rest.</p>
+      </div>
+
+      <div class="verify reveal" id="verify">
+        <div class="mailcard">
+          <div class="mc-h"><span class="mc-av">N</span><div><b>Northgate Fuels</b><span>Revised quotation: diesel · 7 June</span></div></div>
+          <p>Dear Sir, further to our call this morning, <mark>our revised rate for diesel is PKR <span class="num">287</span> per litre with immediate effect</mark>. All other terms remain unchanged.</p>
+        </div>
+        <div class="claims">
+          <div class="claim ok"><span class="tag mono">read</span><span class="mono">Northgate · diesel · PKR 287 / litre</span><span class="verdict">quote found · digits match · filed</span></div>
+          <div class="claim bad"><span class="tag mono">read</span><span class="mono">Northgate · diesel · PKR 278 / litre</span><span class="verdict">278 is not in the source · dropped</span></div>
+        </div>
+      </div>
+
+      <div class="rules">
+        <div class="rule reveal"><b class="mono">01</b><h3>Every fact carries its quote</h3><p>A fact only enters the ledger if the exact sentence can be found in the source. Numbers must match digit for digit.</p></div>
+        <div class="rule reveal"><b class="mono">02</b><h3>"No record" is an answer</h3><p>If your records don't show it, Raymond says so and tells you where it looked. It does not guess.</p></div>
+        <div class="rule reveal"><b class="mono">03</b><h3>It asks when you could mean two things</h3><p>Two Imrans, two open invoices: it asks which one, instead of picking.</p></div>
+        <div class="rule reveal"><b class="mono">04</b><h3>Dates and sums are done by code</h3><p>"Next Friday" is resolved by a calendar, not by a model's arithmetic. Clashes are found by comparing times.</p></div>
+        <div class="rule reveal"><b class="mono">05</b><h3>Email can't give it orders</h3><p>Text inside a message is treated as data. Hidden instructions addressed to "the AI assistant" are flagged to you as suspicious, never followed.</p></div>
+        <div class="rule reveal"><b class="mono">06</b><h3>You approve every action</h3><p>Sending, moving, paying, deleting: each one waits as a card with the exact content, for you to approve or reject.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVACY -->
+  <section class="sec" id="local">
+    <div class="wrap">
+      <div class="split">
+        <h2 class="h2 reveal">Your business stays in the building.</h2>
+        <p class="lede reveal">The model, the ledger and your mail all sit on your own computer. There is no Raymond cloud to send them to, and no account to create with us.</p>
+      </div>
+      <div class="house-wrap reveal">
+        <div class="house">
+          <div class="house-label mono">your computer · 127.0.0.1</div>
+          <div class="house-ray" id="ray-house"></div>
+          <div class="nodes">
+            <div class="node"><b>The model</b><span>runs on your graphics card</span></div>
+            <div class="node"><b>The ledger</b><span>a database on your disk</span></div>
+            <div class="node"><b>Your mail &amp; files</b><span>a synced copy, kept here</span></div>
+          </div>
+        </div>
+        <div class="wire" aria-hidden="true"><svg viewBox="0 0 100 12" preserveAspectRatio="none"><line x1="0" y1="6" x2="100" y2="6"/></svg><span class="mono">reads mail, like a mail app</span></div>
+        <div class="outside">
+          <div class="node out"><b>Microsoft 365</b><span>your mailbox and calendar</span></div>
+          <div class="node ghost"><b>Raymond cloud</b><span>doesn't exist</span></div>
+        </div>
+      </div>
+      <ul class="facts">
+        <li class="reveal"><b>Runs offline.</b> Once your mail has synced, questions are answered with no internet connection.</li>
+        <li class="reveal"><b>No training on your data.</b> We never see it, so we can't.</li>
+        <li class="reveal"><b>Web lookups are optional.</b> If you switch them on, only the search words leave the machine, never your records.</li>
+        <li class="reveal"><b>Delete it and it's gone.</b> Everything lives in one folder on your disk.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section class="sec" id="download">
+    <div class="wrap">
+      <div class="center head">
+        <h2 class="h2 reveal">Get Raymond.</h2>
+        <p class="lede reveal">One installer for each system. It checks your machine, asks four questions, downloads the models and opens Raymond in your browser. Updating is running the newer one.</p>
+      </div>
+      <div class="dl-grid">
+        <div class="downloads" id="downloads"></div>
+        <div class="term reveal" id="term">
+          <div class="term-bar"><span class="lights"><i></i><i></i><i></i></span><span class="mono soft" id="term-title">install · linux</span><button class="copy mono" id="copy" type="button">copy</button></div>
+          <pre class="mono" id="term-body"></pre>
+        </div>
+      </div>
+      <p class="req reveal"><b>What you need:</b> 16 GB of RAM, about 20 GB of free disk and Docker, plus an NVIDIA graphics card with 8 GB on Windows and Linux, or Apple Silicon on a Mac. Mail and calendar sync works with Microsoft 365 and Outlook accounts today.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec" id="faq">
+    <div class="wrap faq-wrap">
+      <h2 class="h2 reveal">Questions</h2>
+      <div class="faq">
+        <details><summary>Is it as capable as the big cloud assistants?</summary><p>For open-ended writing and general knowledge, no: a model that fits on a desktop graphics card is smaller. For questions about your own business it doesn't need to be, because the answers come from your records, with the quote attached, not from the model's memory.</p></details>
+        <details><summary>Which mail does it work with?</summary><p>Microsoft 365 and Outlook mail and calendar, plus any folders of documents you point it at (PDF, Word, Excel, text, meeting recordings).</p></details>
+        <details><summary>Can it send email on its own?</summary><p>No. It prepares the email and shows it to you. It goes out only when you approve that exact text.</p></details>
+        <details><summary>What happens when it's wrong?</summary><p>Every answer shows the sentence it came from, so you can check it in one glance. If the source says something different from the answer, that's a bug we want to hear about.</p></details>
+        <details><summary>Which computers does it run on?</summary><p>Windows 10 or 11 and Linux, with an NVIDIA graphics card that has 8 GB of memory, and Macs with Apple Silicon (M1 or later) and 16 GB of memory. Each needs 16 GB of RAM, about 20 GB of free disk and Docker. The model runs on the graphics chip, which is what keeps answers fast without sending anything off the machine.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-mark">
+      <div class="foot-ray" id="ray-foot"></div>
+      <div class="word">raymond</div>
+    </div>
+    <div class="foot-row">
+      <span>Raymond · a chief of staff that lives on your computer</span>
+      <span id="contact"></span>
+    </div>
+  </div>
+</footer>
+
+<script src="raymond.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

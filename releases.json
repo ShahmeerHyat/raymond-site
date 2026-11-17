@@ -1,0 +1,35 @@
+{
+  "contact": "",
+  "platforms": [
+    {
+      "os": "windows",
+      "note": "Windows 10 or 11 with an NVIDIA graphics card (8 GB) and Docker Desktop. Unzip, then double-click Install Raymond.",
+      "version": "",
+      "url": "",
+      "file": "",
+      "size": "",
+      "sha256": "",
+      "status": "In private testing"
+    },
+    {
+      "os": "macos",
+      "note": "Apple Silicon (M1 or later) with 16 GB, Docker Desktop and Homebrew. Unzip, then double-click Install Raymond.",
+      "version": "",
+      "url": "",
+      "file": "",
+      "size": "",
+      "sha256": "",
+      "status": "In private testing"
+    },
+    {
+      "os": "linux",
+      "note": "Ubuntu 22.04 or later with an NVIDIA graphics card (8 GB), Docker and the NVIDIA container toolkit.",
+      "version": "",
+      "url": "",
+      "file": "",
+      "size": "",
+      "sha256": "",
+      "status": "In private testing"
+    }
+  ]
+}
