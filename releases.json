@@ -1,0 +1,46 @@
+{
+  "contact": "",
+  "platforms": [
+    {
+      "os": "windows",
+      "note": "Windows 10 or 11 with an NVIDIA graphics card (8 GB) and Docker Desktop. Unzip, then double-click Install Raymond.",
+      "version": "",
+      "url": "",
+      "file": "",
+      "size": "",
+      "sha256": "",
+      "status": "In private testing"
+    },
+    {
+      "os": "macos",
+      "note": "Apple Silicon (M1 or later) with 16 GB, Docker Desktop and Homebrew. Unzip, then double-click Install Raymond.",
+      "version": "",
+      "url": "",
+      "file": "",
+      "size": "",
+      "sha256": "",
+      "status": "In private testing"
+    },
+    {
+      "os": "linux",
+      "note": "Ubuntu 22.04 or later with an NVIDIA graphics card (8 GB), Docker and the NVIDIA container toolkit.",
+      "version": "",
+      "url": "",
+      "file": "",
+      "size": "",
+      "sha256": "",
+      "status": "In private testing"
+    },
+    {
+      "os": "android",
+      "note": "Android phone app. Download on your phone, open the file, and allow installs from your browser when asked.",
+      "version": "1.0",
+      "url": "https://github.com/ShahmeerHyat/raymond-site/releases/download/android-v1.0/raymond-1.0-android.apk",
+      "file": "raymond-1.0-android.apk",
+      "size": "14.3 MB",
+      "sha256": "baf506afe3f6f7e3d817f61d641e51c3b1e4273af109c1ce39849665ec264f84",
+      "status": "",
+      "qr": "qr-android.svg"
+    }
+  ]
+}
